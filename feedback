@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback Page</title>
+<style>
+body {
+    background-color: whitesmoke;
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+main {
+    text-align: center;
+    background-color: white;
+    border: 1px solid gray;
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.rating {
+    font-size: 35px;
+    margin: 20px 0;
+}
+
+button {
+    background-color: navy;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Customer Feedback</h1>
+</header>
+
+<main>
+<h2>Rate Your Experience</h2>
+
+<p class="rating">🔴 🟠 🟡 🟢 🔵</p>
+
+<p>🔴 Very Bad</p>
+<p>🟠 Bad</p>
+<p>🟡 Average</p>
+<p>🟢 Good</p>
+<p>🔵 Excellent</p>
+
+<button>Submit</button>
+</main>
+
+<footer>
+<p>© 2025 Feedback Page | Made by Muttanna S Y</p>
+</footer>
+
+</body>
+</html>
+
+
+
+.rating:hover {
+    font-size: 40px;
+}
+
+button:hover {
+    background-color: royalblue;
+}
