@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMSCE Canteen Menu</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-bottom: 4px solid royalblue;
+        }
+
+        main {
+            width: 700px;
+            margin: 30px auto;
+            background-color: white;
+            border: 1px solid gray;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        h2 {
+            color: darkslategray;
+            border-bottom: 2px solid royalblue;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            background-color: ghostwhite;
+            border: 1px solid lightgray;
+            margin-bottom: 8px;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .item-name {
+            font-weight: bold; 
+            color: midnightblue;
+        }
+
+        .item-price {
+            float: right;
+            color: dodgerblue;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            color: gray;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>BMSCE Canteen Menu</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Breakfast</h2>
+        <ul>
+            <li><span class="item-name">Idli</span><span class="item-price">₹30</span></li>
+            <li><span class="item-name">Masala Dosa</span><span class="item-price">₹40</span></li>
+            <li><span class="item-name">Vada</span><span class="item-price">₹25</span></li>
+            <li><span class="item-name">Poori Bhaji</span><span class="item-price">₹35</span></li>
+            <li><span class="item-name">Upma</span><span class="item-price">₹30</span></li>
+            <li><span class="item-name">Kesari Bath</span><span class="item-price">₹30</span></li>
+            <li><span class="item-name">Set Dosa</span><span class="item-price">₹35</span></li>
+            <li><span class="item-name">Bisibele Bath</span><span class="item-price">₹40</span></li>
+            <li><span class="item-name">Onion Dosa</span><span class="item-price">₹45</span></li>
+            <li><span class="item-name">Tomato Bath</span><span class="item-price">₹35</span></li>
+            <li><span class="item-name">Chow Chow Bath</span><span class="item-price">₹40</span></li>
+            <li><span class="item-name">Rava Idli</span><span class="item-price">₹30</span></li>
+            <li><span class="item-name">Bread Toast</span><span class="item-price">₹25</span></li>
+            <li><span class="item-name">Omelette</span><span class="item-price">₹20</span></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    © 2025 BMS College of Engineering Canteen
+</footer>
+
+</body>
+</html>
