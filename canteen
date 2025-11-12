@@ -45,30 +45,15 @@
 
         li {
             background-color: ghostwhite;
-            border: 1px solid lightgray;
+            
             margin-bottom: 8px;
             padding: 10px;
             border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
         }
 
-        .item-name {
-            font-weight: bold; 
-            color: midnightblue;
-        }
-
-        .item-price {
-            float: right;
-            color: dodgerblue;
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            color: gray;
-            font-size: 14px;
-            margin-top: 20px;
-        }
-    </style>
+       </style>
 </head>
 <body>
 
@@ -80,27 +65,16 @@
     <section>
         <h2>Breakfast</h2>
         <ul>
-            <li><span class="item-name">Idli</span><span class="item-price">₹30</span></li>
-            <li><span class="item-name">Masala Dosa</span><span class="item-price">₹40</span></li>
-            <li><span class="item-name">Vada</span><span class="item-price">₹25</span></li>
-            <li><span class="item-name">Poori Bhaji</span><span class="item-price">₹35</span></li>
-            <li><span class="item-name">Upma</span><span class="item-price">₹30</span></li>
-            <li><span class="item-name">Kesari Bath</span><span class="item-price">₹30</span></li>
-            <li><span class="item-name">Set Dosa</span><span class="item-price">₹35</span></li>
-            <li><span class="item-name">Bisibele Bath</span><span class="item-price">₹40</span></li>
-            <li><span class="item-name">Onion Dosa</span><span class="item-price">₹45</span></li>
-            <li><span class="item-name">Tomato Bath</span><span class="item-price">₹35</span></li>
-            <li><span class="item-name">Chow Chow Bath</span><span class="item-price">₹40</span></li>
-            <li><span class="item-name">Rava Idli</span><span class="item-price">₹30</span></li>
-            <li><span class="item-name">Bread Toast</span><span class="item-price">₹25</span></li>
-            <li><span class="item-name">Omelette</span><span class="item-price">₹20</span></li>
+            <li>Idli <b>₹30</b></li>
+            <li>Masala Dosa <b>₹40</b></li>
+            <li>Vada <b>₹25</b></li>
+            <li>Poori Bhaji <b>₹35</b></li>
+            <li>Upma <b>₹30</b></li>
+            <li>Kesari Bath <b>₹30</b></li>
+            <li>Set Dosa <b>₹35</b></li>
         </ul>
     </section>
 </main>
-
-<footer>
-    © 2025 BMS College of Engineering Canteen
-</footer>
 
 </body>
 </html>
