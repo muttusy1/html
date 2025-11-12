@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WhatsApp Web Login Steps</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #202c33;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            background-color: white;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px gray;
+        }
+
+        ol {
+            text-align: left;
+            background-color: #d4f8d4; /* light green */
+            padding: 15px;
+            border-radius: 8px;
+            width: 300px;
+            margin: 20px auto;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        a {
+            color: #25D366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Steps to Log in</h2>
+
+    <ol>
+        <li>Open WhatsApp on your phone.</li>
+        <li>On Android tap Menu (⋮) or on iPhone tap Settings (⚙).</li>
+        <li>Tap Linked devices, then tap Link a device.</li>
+        <li>Scan the QR code shown below.</li>
+    </ol>
+
+    <p>
+        <img src="C:\Users\muttu\OneDrive\Pictures\asus.jpg" alt="QR Code">
+    </p>
+
+    <p>
+        <a href="#">Log in with phone number &gt;</a>
+    </p>
+
+</body>
+</html>
