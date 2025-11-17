@@ -1,0 +1,116 @@
+CREATE DATABASE Company;
+USE Company;
+
+CREATE TABLE DEPARTMENT(
+    Dname VARCHAR(20),
+    Dnumber INT PRIMARY KEY,
+    Mgr_ssn CHAR(9),
+    Mgr_start_date DATE
+);
+
+CREATE TABLE EMPLOYEE(
+    Fname VARCHAR(20),
+    Minit CHAR(1),
+    Lname VARCHAR(20),
+    SSN CHAR(9) PRIMARY KEY,
+    Bdate DATE,
+    Address VARCHAR(50),
+    Sex CHAR(1),
+    Salary DECIMAL(10,2),
+    Super_ssn CHAR(9),
+    Dno INT,
+    FOREIGN KEY(Dno) REFERENCES DEPARTMENT(Dnumber)
+);
+
+ALTER TABLE DEPARTMENT 
+ADD FOREIGN KEY(Mgr_ssn) REFERENCES EMPLOYEE(SSN);
+
+ALTER TABLE EMPLOYEE 
+ADD FOREIGN KEY(Super_ssn) REFERENCES EMPLOYEE(SSN);
+
+CREATE TABLE DEPT_LOCATIONS(
+    Dnumber INT,
+    Dlocation VARCHAR(20),
+    PRIMARY KEY(Dnumber, Dlocation),
+    FOREIGN KEY(Dnumber) REFERENCES DEPARTMENT(Dnumber)
+);
+
+CREATE TABLE PROJECT(
+    Pname VARCHAR(20),
+    Pnumber INT PRIMARY KEY,
+    Plocation VARCHAR(20),
+    Dno INT,
+    FOREIGN KEY(Dno) REFERENCES DEPARTMENT(Dnumber)
+);
+
+CREATE TABLE WORKS_ON(
+    Essn CHAR(9),
+    Pno INT,
+    Hours DECIMAL(3,1),
+    PRIMARY KEY(Essn, Pno),
+    FOREIGN KEY(Essn) REFERENCES EMPLOYEE(SSN),
+    FOREIGN KEY(Pno) REFERENCES PROJECT(Pnumber)
+);
+
+CREATE TABLE DEPENDENT(
+    Essn CHAR(9),
+    Dependent_name VARCHAR(20),
+    Sex CHAR(1),
+    Bdate DATE,
+    Relationship VARCHAR(20),
+    PRIMARY KEY(Essn, Dependent_name),
+    FOREIGN KEY(Essn) REFERENCES EMPLOYEE(SSN)
+);
+
+INSERT INTO DEPARTMENT VALUES
+('HR',1,NULL,'2020-01-01'),
+('Finance',2,NULL,'2020-03-01'),
+('IT',3,NULL,'2020-05-01'),
+('Sales',4,NULL,'2020-07-01'),
+('R&D',5,NULL,'2020-09-01');
+
+INSERT INTO EMPLOYEE VALUES
+('Lalith','K','Sharma','111111111','1995-03-14','Bangalore','M',75000,NULL,1),
+('Rohith','M','Kishan','222222222','1996-07-22','Hyderabad','M',68000,'111111111',2),
+('Anush','G','GG','333333333','1997-01-05','Chennai','M',72000,'111111111',3),
+('Surya','Y','H','444444444','1994-09-10','Mumbai','M',78000,'222222222',4),
+('Nishel','S','Sareo','555555555','1993-12-25','Delhi','M',82000,'111111111',5);
+
+UPDATE DEPARTMENT SET Mgr_ssn='111111111' WHERE Dnumber=1;
+UPDATE DEPARTMENT SET Mgr_ssn='222222222' WHERE Dnumber=2;
+UPDATE DEPARTMENT SET Mgr_ssn='333333333' WHERE Dnumber=3;
+UPDATE DEPARTMENT SET Mgr_ssn='444444444' WHERE Dnumber=4;
+UPDATE DEPARTMENT SET Mgr_ssn='555555555' WHERE Dnumber=5;
+
+INSERT INTO DEPT_LOCATIONS VALUES
+(1,'Bangalore'),
+(2,'Hyderabad'),
+(3,'Chennai'),
+(4,'Mumbai'),
+(5,'Delhi');
+
+INSERT INTO PROJECT VALUES
+('Recruitment',10,'Bangalore',1),
+('Budgeting',20,'Hyderabad',2),
+('AppDev',30,'Chennai',3),
+('Marketing',40,'Mumbai',4),
+('AIResearch',50,'Delhi',5);
+
+INSERT INTO WORKS_ON VALUES
+('111111111',10,12.0),
+('222222222',20,15.0),
+('333333333',30,10.5),
+('444444444',40,14.0),
+('555555555',50,18.0);
+
+INSERT INTO DEPENDENT VALUES
+('111111111','Aarav','M','2012-05-10','Son'),
+('222222222','Diya','F','2014-09-21','Daughter'),
+('333333333','Meera','F','2016-11-11','Wife'),
+('444444444','Riya','F','2018-03-18','Daughter'),
+('555555555','Arjun','M','2010-08-30','Son');
+
+SHOW TABLES;
+
+SELECT * FROM EMPLOYEE;
+SELECT * FROM DEPARTMENT;
