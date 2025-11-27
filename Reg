@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form>
+
+    Full Name:<br>
+    <input type="text"><br><br>
+
+    Email:<br>
+    <input type="email"><br><br>
+
+    Phone Number:<br>
+    <input type="text"><br><br>
+
+    Date of Birth:<br>
+    <input type="date"><br><br>
+
+    Address:<br>
+    <textarea rows="3" cols="25"></textarea><br><br>
+
+    Gender:<br>
+    <input type="radio" name="g"> Male
+    <input type="radio" name="g"> Female
+    <input type="radio" name="g"> Other<br><br>
+
+    Select Course:<br>
+    <select>
+        <option>Computer Science</option>
+        <option>Electronics</option>
+        <option>Mechanical</option>
+        <option>Civil</option>
+    </select><br><br>
+
+    Password:<br>
+    <input type="password"><br><br>
+
+    Confirm Password:<br>
+    <input type="password"><br><br>
+
+    <button type="submit">Register</button>
+
+</form>
+
+</body>
+</html>
